@@ -4,18 +4,19 @@ from PIL import Image
 import os
 
 HN_IMAGE = Image.open("img/hn_logo.png")
-st.set_page_config(page_title="뭐든지 질문하세요🤖")
-st.title("뭐든지 질문하세요 🤖")
+st.set_page_config(page_title=" 새로운 대화의 시작🤖")
+st.title("무한한 가능성을 여는 새로운 대화의 시작 🤖")
 stop = False
 
 with st.sidebar:
     st.image(HN_IMAGE)
     st.markdown("""
-    # **안녕하세요!**
+    # **Retro Coar AI**
 
-    Are you fatigued from navigating the expansive digital realm in search of your daily tech tales 
-    and hacker happenings? Fear not, for your cyber-savvy companion has descended upon the scene – 
-    behold the extraordinary **NewsNerd HackerBot**!
+    Retro Coarsoft AI는 다양한 Retro 게임 개발 프로젝트를 진행하며, 이를 통해 과거의 게임 경험을 현대적인 게이밍 환경에 재현하는 것에 주력하고 있습니다. 
+    뿐만 아니라, 선택한 과거의 게임을 재해석하는 데 그치지 않고 AI 기술을 활용하여 게임 경험을 혁신하고 향상시키는 것에도 주목합니다. 
+    이를 통해 플레이어들에게 새롭고 흥미진진한 게임 경험을 제공하고자 합니다.Retro Coarsoft AI의 목표는 Retro 게임을 현대 기술로 되살려 향수를 느끼는 동시에, 
+    새로운 디지털 경험을 통해 더욱 풍부하고 창의적인 게임 세계를 제공하는 것입니다
     """)
 
 
@@ -33,7 +34,7 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
-if prompt := st.chat_input("What is up?"):
+if prompt := st.chat_input("자유롭게 대화해 보세요"):
     st.session_state.messages.append({"role": "user", "content": prompt})
     # Display user message in chat message container
     with st.chat_message("user"):
