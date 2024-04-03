@@ -25,7 +25,7 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 
 if "openai_model" not in st.session_state:
-    st.session_state["openai_model"] = "gpt-4-0314"
+    st.session_state["openai_model"] = "gpt-4-0125-preview"
 if "messages" not in st.session_state:
  st.session_state.messages = []
 
