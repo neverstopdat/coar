@@ -5,7 +5,9 @@ import os
 
 HN_IMAGE = Image.open("img/hn_logo.png")
 st.set_page_config(page_title=" 새로운 대화의 시작🤖")
-st.title("무한한 가능성을 여는 새로운 대화의 시작 🤖")
+
+st.subheader('무한한 가능성을 여는 새로운 대화의 시작', divider='rainbow')
+#st.title("무한한 가능성을 여는 새로운 대화의 시작 ")
 stop = False
 
 with st.sidebar:
