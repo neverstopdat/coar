@@ -22,9 +22,6 @@ with st.sidebar:
 
 #connect openai key
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-if not OPENAI_API_KEY:
-    st.error("OpenAI API key is not set. Please set the OPENAI_API_KEY environment variable.")
-    st.stop()
 
 
 if "openai_model" not in st.session_state:
